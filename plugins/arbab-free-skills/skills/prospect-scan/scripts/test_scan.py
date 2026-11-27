@@ -108,3 +108,9 @@ def test_instagram_handle_picked_up_for_the_oriane_booster():
     html = page('<a href="https://www.instagram.com/lina.beauty/">IG</a> <a href="https://instagram.com/p/abc">post</a>')
     assert scan.check(PLACE, reader_for(html))["instagram"] == "lina.beauty"
     assert scan.check(dict(PLACE, website="https://instagram.com/somebrand"))["instagram"] == "somebrand"
+
+
+def test_company_inbox_found_but_never_a_person():
+    html = page('<a href="mailto:Info@salon.example">mail</a> sara.k@salon.example x@gmail.com')
+    assert scan.check(PLACE, reader_for(html))["email"] == "info@salon.example"
+    assert scan.check(PLACE, reader_for(page("sara.k@salon.example")))["email"] == ""

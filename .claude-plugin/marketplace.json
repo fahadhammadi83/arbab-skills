@@ -11,8 +11,8 @@
     {
       "name": "arbab-free-skills",
       "source": "./plugins/arbab-free-skills",
-      "description": "Ready skills that do the work in one line: Instagram screenshots to a website, a UAE PRO officer, WhatsApp Business replies, meeting minutes, a morning brief and a weekly report, and a nightly prospect scan that finds which businesses to contact.",
-      "version": "1.1.0",
+      "description": "Ready skills that do the work in one line: Instagram screenshots to a website, a UAE PRO officer, WhatsApp Business replies, meeting minutes, a morning brief and a weekly report, a nightly prospect scan that finds which businesses to contact, and safe one-at-a-time prospect emails with approval and follow-ups.",
+      "version": "1.2.0",
       "author": {
         "name": "Fahad Al Hammadi (The Arbab)",
         "url": "https://arbab.tech"
@@ -22,8 +22,10 @@
       "license": "CC-BY-NC-4.0",
       "keywords": [
         "arabic",
+        "cold-email",
         "dubai",
         "lead-generation",
+        "outreach",
         "productivity",
         "prospecting",
         "skills",
