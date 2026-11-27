@@ -102,3 +102,9 @@ def test_batch_cap_and_kill_switch(tmp_path):
     (out / "STOP").touch()
     assert scan.run([str(lst)], out, 50, 1, reader_for(page("x"))) is None
     assert len(scan.read_csv(out / "scanned.csv")) == scan.MAX_BATCH
+
+
+def test_instagram_handle_picked_up_for_the_oriane_booster():
+    html = page('<a href="https://www.instagram.com/lina.beauty/">IG</a> <a href="https://instagram.com/p/abc">post</a>')
+    assert scan.check(PLACE, reader_for(html))["instagram"] == "lina.beauty"
+    assert scan.check(dict(PLACE, website="https://instagram.com/somebrand"))["instagram"] == "somebrand"

@@ -72,7 +72,7 @@ NOT_AGENCY = ("facebook.", "instagram.", "twitter.", "x.com", "linkedin.", "yout
               "shopify.com", "webflow.com", "salla.", "zid.", "trustpilot", "cloudflare")
 FIELDS = ["scan_date", "source", "name", "category", "phone", "channel", "rating", "reviews", "address", "maps_url",
           "website", "site_status", "score", "lead_signal", "ads", "tech", "booking", "whatsapp", "arabic",
-          "built_by", "ai_blocked", "days_since_update", "careers_page", "error"]
+          "built_by", "ai_blocked", "days_since_update", "careers_page", "instagram", "error"]
 
 
 # ---------- reading a site ----------
@@ -175,12 +175,22 @@ def signals_from(html, url, robots="", sitemap="", careers=""):
             "arabic_pages": 'hreflang="ar' in html or "/ar/" in html or 'lang="ar' in html,
             "numbers": re.findall(r"\b\d{2,}(?:[.,]\d+)?%?", text)[:20],
             "review_words": len(re.findall(r"review|Clutch|Google rating", text, re.I)),
+            "instagram": instagram_handles(html),
             "ads_running": [k for k, pats in ADS.items() if matches(html, pats)],
             "tech": [k for k, pats in TECH.items() if matches(html, pats)],
             "booking_hint": matches(html, BOOKING), "built_by": built_by(html, host),
             "ai_bots_blocked": ai_bots_blocked(robots),
             "days_since_update": days_since(re.findall(r"<lastmod>\s*(\d{4}-\d{2}-\d{2})", sitemap)),
             "careers_page": careers}
+
+
+IG_NOT_HANDLES = {"p", "reel", "reels", "explore", "stories", "accounts", "tv", "about", "developer", "legal"}
+
+
+def instagram_handles(html):
+    """The business's own Instagram handle(s) linked from its site (for the Oriane booster)."""
+    found = re.findall(r"instagram\.com/([A-Za-z0-9_.]{2,30})", html)
+    return sorted({h.rstrip(".").lower() for h in found if h.lower() not in IG_NOT_HANDLES})[:3]
 
 
 # ---------- judging a business ----------
@@ -236,12 +246,14 @@ def lead_signal(r):
 def check(place, reader=site_signals):
     """One business: its site status, signals, score and reason to message."""
     row = dict(place, site_status="", score="", ads="", tech="", booking="", whatsapp="", arabic="", built_by="",
-               ai_blocked="", days_since_update="", careers_page="", error="")
+               ai_blocked="", days_since_update="", careers_page="", instagram="", error="")
     host = re.sub(r"^https?://(www\.)?", "", place["website"].lower())
     if not place["website"]:
         row["site_status"] = "none"
     elif any(host.startswith(h) or ("." + h) in host.split("/")[0] for h in SOCIAL_HOSTS):
         row["site_status"] = "social"
+        handle = re.match(r"instagram\.com/([A-Za-z0-9_.]{2,30})", host)
+        row["instagram"] = handle.group(1).lower() if handle else ""
     else:
         try:
             s = reader(place["website"])
@@ -256,7 +268,7 @@ def check(place, reader=site_signals):
                        whatsapp="yes" if s["wa_links"] else "no", arabic="yes" if s["arabic_pages"] else "no",
                        built_by=s["built_by"], ai_blocked=", ".join(s["ai_bots_blocked"]),
                        days_since_update="" if s["days_since_update"] is None else s["days_since_update"],
-                       careers_page=s["careers_page"])
+                       careers_page=s["careers_page"], instagram=", ".join(s.get("instagram", [])))
     row["lead_signal"] = lead_signal(row)
     row["channel"] = channel(place["phone"])
     return row

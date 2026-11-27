@@ -17,7 +17,7 @@ Built by **Fahad Al Hammadi (The Arbab)**: [arbab.tech](https://arbab.tech) · I
 | **meeting-notes** | Any transcript, notes or chat screenshots | Finished minutes with decisions and action points |
 | **morning-brief** | Your inbox and calendar (connected) | A one-page plan for your day |
 | **weekly-report** | Your sent emails and meetings (connected) | A weekly report for your manager, no typing |
-| **prospect-scan** | A list of businesses (CSV, Google Maps export or URLs) and what you sell | The 5 worth contacting today, each with its real website gap and a ready first message. Can run every night |
+| **prospect-scan** | A list of businesses (CSV, Google Maps export or URLs) and what you sell | The 5 worth contacting today, each with its real website gap and a ready first message. Can run every night, and gets stronger with Apify, Firecrawl or Oriane connected |
 
 The morning-brief and weekly-report skills work best with Gmail or Outlook and your calendar connected in Claude (paid Claude plans). Without connectors, they work from what you paste or upload.
 
