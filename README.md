@@ -19,6 +19,7 @@ Built by **Fahad Al Hammadi (The Arbab)**: [arbab.tech](https://arbab.tech) · I
 | **weekly-report** | Your sent emails and meetings (connected) | A weekly report for your manager, no typing |
 | **prospect-scan** | A list of businesses (CSV, Google Maps export or URLs) and what you sell | The 5 worth contacting today, each with its real website gap and a ready first message. Can run every night, and gets stronger with Apify, Firecrawl or Oriane connected |
 | **prospect-emails** | Your prospect list (works with prospect-scan) and your connected Gmail or Outlook | One genuinely different email per company, sent one at a time after you approve, with a daily cap, bounce protection and follow-ups on day 5 and 14 |
+| **website-audit** | Any business's website | A clean report scored out of 70 on seven proof checks (Google profile, phone speed, local-language search, WhatsApp, proof, Instagram, lead capture), the three fixes that matter most, and a message to send with it. English or Arabic, PDF included |
 
 The morning-brief and weekly-report skills work best with Gmail or Outlook and your calendar connected in Claude (paid Claude plans). Without connectors, they work from what you paste or upload.
 
@@ -68,6 +69,7 @@ The mandoob skill gives information from official UAE sources with dates and lin
 | **weekly-report** | <div dir="rtl" align="right">‏إيميلاتك واجتماعاتك (بعد الربط)</div> | <div dir="rtl" align="right">‏تقرير أسبوعي لمديرك بدون ما تكتب شي</div> |
 | **prospect-scan** | <div dir="rtl" align="right">‏قائمة شركات وشو تبيع</div> | <div dir="rtl" align="right">‏أفضل خمس شركات تتواصل معها اليوم، مع الثغرة في موقعها ورسالة أولى جاهزة، وتقدر تشتغل كل ليلة</div> |
 | **prospect-emails** | <div dir="rtl" align="right">‏قائمة العملاء وإيميلك المربوط</div> | <div dir="rtl" align="right">‏إيميل مختلف لكل شركة، يطلع واحد واحد بعد موافقتك، مع حد يومي ومتابعة في اليوم الخامس والرابع عشر</div> |
+| **website-audit** | <div dir="rtl" align="right">‏موقع أي شركة</div> | <div dir="rtl" align="right">‏تقرير من 70 في سبع فحوصات، مع أهم ثلاث إصلاحات ورسالة جاهزة، بالعربي أو الإنجليزي</div> |
 
 <div dir="rtl" align="right">
 
