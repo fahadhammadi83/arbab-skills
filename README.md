@@ -17,6 +17,7 @@ Built by **Fahad Al Hammadi (The Arbab)**: [arbab.tech](https://arbab.tech) · I
 | **meeting-notes** | Any transcript, notes or chat screenshots | Finished minutes with decisions and action points |
 | **morning-brief** | Your inbox and calendar (connected) | A one-page plan for your day |
 | **weekly-report** | Your sent emails and meetings (connected) | A weekly report for your manager, no typing |
+| **prospect-scan** | A list of businesses (CSV, Google Maps export or URLs) and what you sell | The 5 worth contacting today, each with its real website gap and a ready first message. Can run every night |
 
 The morning-brief and weekly-report skills work best with Gmail or Outlook and your calendar connected in Claude (paid Claude plans). Without connectors, they work from what you paste or upload.
 
@@ -64,6 +65,7 @@ The mandoob skill gives information from official UAE sources with dates and lin
 | **meeting-notes** | <div dir="rtl" align="right">‏أي محضر أو ملاحظات أو سكرين شوت من الشات</div> | <div dir="rtl" align="right">‏محضر اجتماع مرتب بالقرارات والمهام</div> |
 | **morning-brief** | <div dir="rtl" align="right">‏إيميلك وتقويمك (بعد الربط)</div> | <div dir="rtl" align="right">‏خطة يومك في صفحة وحدة</div> |
 | **weekly-report** | <div dir="rtl" align="right">‏إيميلاتك واجتماعاتك (بعد الربط)</div> | <div dir="rtl" align="right">‏تقرير أسبوعي لمديرك بدون ما تكتب شي</div> |
+| **prospect-scan** | <div dir="rtl" align="right">‏قائمة شركات وشو تبيع</div> | <div dir="rtl" align="right">‏أفضل خمس شركات تتواصل معها اليوم، مع الثغرة في موقعها ورسالة أولى جاهزة، وتقدر تشتغل كل ليلة</div> |
 
 <div dir="rtl" align="right">
 
