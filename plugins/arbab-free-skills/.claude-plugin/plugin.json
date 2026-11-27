@@ -1,0 +1,10 @@
+{
+  "name": "arbab-free-skills",
+  "version": "1.0.0",
+  "description": "Free ready-to-use Claude skills from Arbab AI Technologies, Dubai: insta-to-website, mandoob (UAE PRO), whatsapp-replies, meeting-notes, morning-brief, weekly-report.",
+  "author": { "name": "Fahad Al Hammadi (The Arbab)", "url": "https://arbab.tech" },
+  "homepage": "https://arbab.tech",
+  "repository": "https://github.com/fahadhammadi83/arbab-skills",
+  "license": "CC-BY-NC-4.0",
+  "keywords": ["skills", "arabic", "uae", "dubai", "small-business", "productivity"]
+}
